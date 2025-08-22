@@ -695,7 +695,7 @@
             transform: translateY(60px);
             display: flex;
             flex-direction: column;
-            height: 380px;
+            min-height: 380px; 
             justify-content: space-between;
         }
 
@@ -746,6 +746,11 @@
             color: var(--text-primary);
             transform: translateY(3px);
         }
+        .project-card .project-cta {
+  margin-top: auto; 
+color: inherit;
+text-decoration: none;
+}
 
         /* Tech Tags */
         .project-tech {
@@ -1068,6 +1073,14 @@
         margin-bottom: 2rem;
     }
 }
+@media (max-width: 768px) {
+  .project-card {
+    height: auto;      /* was 380px */
+    overflow: visible; /* so nothing gets clipped */
+    padding-bottom: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
     .hero-subtitle {
         white-space: normal;
@@ -1368,7 +1381,7 @@
                     <span class="tech-tag">CSS3</span>
                     <span class="tech-tag">Responsive</span>
                 </div>
-                <a href="https://kickswift.vercel.app" target="_blank" class="project-link">View Live Site</a>
+                <a href="https://kickswift.vercel.app" target="_blank"  class="project-cta">View Live Site ==></a>
             </div>
             
             <div class="project-card" onclick="window.open('https://www.qunocampus.com/', '_blank')">
@@ -1380,9 +1393,9 @@
                     <span class="tech-tag">Database</span>
                     <span class="tech-tag">Real-time</span>
                 </div>
-                <a href="https://www.qunocampus.com/" target="_blank" class="project-link">View Live Site</a>
+                <a href="https://www.qunocampus.com/" target="_blank" class="project-cta">View Live Site ==></a>
             </div>
-            
+      
             <div class="project-card">
                 <h3>Blood Bank Management</h3>
                 <p>Revolutionary blood bank management system with donor tracking, inventory management, automated notifications, reporting features, and advanced data analytics built using OOP principles.</p>
